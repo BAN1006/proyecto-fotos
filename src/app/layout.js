@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,21 +20,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <body
-        className={
-          `${geistSans.variable} ${geistMono.variable} antialiased` /* bg-[url('../../public/descarga.jpg')] */
-        }
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+    <Suspense fallback={<div>Cargando...</div>}>
+      <html lang="es" suppressHydrationWarning>
+        <body
+          className={
+            `${geistSans.variable} ${geistMono.variable} antialiased` /* bg-[url('../../public/descarga.jpg')] */
+          }
         >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </Suspense>
   );
 }
