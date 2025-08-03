@@ -18,19 +18,20 @@ import {
   FormDescription,
   FormMessage,
 } from "@/components/ui/form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 
 import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import data from "../../public/data/localData";
+
+import data from "../../../public/data/localData";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import appFirebase from "../../public/data/credenciales";
+import appFirebase from "../../../public/data/credenciales";
 import { getDocs, collection, getFirestore } from "firebase/firestore";
 
 export default function Envio() {

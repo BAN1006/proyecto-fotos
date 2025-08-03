@@ -10,8 +10,9 @@ const firebaseConfig = {
   projectId: "proyecto-fotos-f1fc2",
   storageBucket: "proyecto-fotos-f1fc2.firebasestorage.app",
   messagingSenderId: "703248778516",
-  appId: "1:703248778516:web:bcfa0945e3a469e2042e01"
+  appId: "1:703248778516:web:760ee8785faee800042e01"
 };
+
 
 // Initialize Firebase
 const appFirebase = initializeApp(firebaseConfig);

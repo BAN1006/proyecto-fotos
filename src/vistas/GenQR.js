@@ -15,7 +15,7 @@ const GenerarQR = () => {
   const estado = "";
 
   data.map((x) => {
-    let link = "http://192.168.1.7:3000/?user="; //pendejo no te olvides cambiar la direccion antes de generar los QR
+    let link = "http://192.168.1.19:3000/cards?user="; //pendejo no te olvides cambiar la direccion antes de generar los QR
     let pathFile = join(__dirname, "qr", x.id + ".png");
     link = link.concat(x.id);
     //pathFile = pathFile.concat(x.id, ".png");

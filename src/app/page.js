@@ -16,5 +16,5 @@ export default function Main() {
     GenerarQR();
   }, []);
 
-  return <div>{search === null ? <Fotos /> : <Envio />}</div>;
+  return <div>{<Fotos />}</div>;
 }
