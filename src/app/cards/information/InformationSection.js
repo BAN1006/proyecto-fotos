@@ -3,11 +3,12 @@
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import data from "../../../../public/data/localData";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import appFirebase from "../../../../public/data/credenciales";
 import { getDocs, collection, getFirestore } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { decryptParam } from "@/app/api/utilities/utilidades";
 
 export default function InformationSection() {
   const db = getFirestore(appFirebase);
@@ -16,9 +17,13 @@ export default function InformationSection() {
 
   const search = searchParams.get("user");
 
-  const user = data.find((element) => element.id === search);
+  var decrypt = decryptParam(search);
+
+  const user = data.find((element) => element.id === decrypt);
 
   const router = useRouter();
+
+  const [band, setBand] = useState(false);
 
   useEffect(() => {
     const getLista = async () => {
@@ -26,7 +31,7 @@ export default function InformationSection() {
         const reg = await getDocs(collection(db, "fotos"));
         reg.forEach((doc) => {
           if (!(doc.data().user === user.nombre)) {
-            router.push("/cards?view=01&user=" + user.id);
+            setBand(true);
           }
         });
       } catch (e) {
@@ -40,7 +45,7 @@ export default function InformationSection() {
     <div className="lg:min-h-[793px] flex items-center justify-center border-2 rounded-2xl border-black flex-col flex-1/2 p-6 gap-2 bg-[url('../../public/fondolg.png')] bg-center bg-no-repeat bg-cover lg:max-w-lg lg:p-11">
       <div className="flex-1/8 lg:text-xl sm:text-xs pl-3 pr-3">
         <p className="text-black pt-1 text-justify lg:pt-8">
-          Hola <strong>{user.apodo}</strong>, con esto confirmaste tu
+          Hola <strong>{user.nombre}</strong>, con esto confirmaste tu
           asistencia, ahora unas cosas a tomar en cuenta:
         </p>
       </div>
@@ -114,12 +119,16 @@ export default function InformationSection() {
               </p>
             </div>
             <div className="pb-4">
-              <Link
-                href={`/cards?view=02&user=${search}`}
-                className="text-black border-[1px] p-2 border-black rounded-2xl text-center align-middle hover:text-white hover:bg-black"
-              >
-                Enviar confirmacion
-              </Link>
+              {!band ? (
+                <Link
+                  href={`/cards?view=02&user=${search}`}
+                  className="text-black border-[1px] p-2 border-black rounded-2xl text-center align-middle hover:text-white hover:bg-black"
+                >
+                  Enviar confirmacion
+                </Link>
+              ) : (
+                <p className="text-red-700"><strong>Numero de pases: {user.pases}</strong></p>
+              )}
             </div>
           </div>
         </div>

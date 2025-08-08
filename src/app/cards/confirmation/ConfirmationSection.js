@@ -34,6 +34,8 @@ import appFirebase from "../../../../public/data/credenciales";
 import { getDocs, collection, getFirestore } from "firebase/firestore";
 
 import data from "../../../../public/data/localData";
+import { decryptParam } from "@/app/api/utilities/utilidades";
+
 
 export default function ConfirmationSection() {
   const db = getFirestore(appFirebase);
@@ -42,8 +44,14 @@ export default function ConfirmationSection() {
 
   const search = searchParams.get("user");
 
-  const user = data.find((element) => element.id === search);
-  
+  console.log("Busqueda=" + search);
+
+  var decrypt = decryptParam(search);
+
+  console.log(decrypt);
+
+  const user = data.find((element) => element.id === decrypt);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -53,7 +61,7 @@ export default function ConfirmationSection() {
         const docs = [];
         reg.forEach((doc) => {
           if (doc.data().user === user.nombre) {
-            router.push("/cards?view=01&user=" + user.id);
+            router.push("/cards?view=01&user=" + search);
           }
         });
       } catch (e) {
@@ -129,7 +137,7 @@ export default function ConfirmationSection() {
             Sube tu recuerdo
           </CardTitle>
           <CardDescription className="pl-6 pr-6 text-black lg:text-lg">
-            Hola <strong>{user.apodo}</strong> sube un recuerdo que tengas
+            Hola <strong>{user.nombre}</strong> sube un recuerdo que tengas
             conmigo y no olvides dejarme un mensaje.
           </CardDescription>
         </CardHeader>

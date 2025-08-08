@@ -1,7 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["randomqr.com","media.tenor.com","res.cloudinary.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "randomqr.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "media.tenor.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 

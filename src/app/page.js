@@ -4,8 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 import Fotos from "../vistas/Fotos";
-import Envio from "../vistas/Envio";
-import GenerarQR from "@/vistas/GenQR";
+import GenerarQR from "@/app/api/utilities/generarQR";
 
 export default function Main() {
   const searchParams = useSearchParams();
