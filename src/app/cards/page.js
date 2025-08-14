@@ -47,7 +47,7 @@ export default function Cards() {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!searchParams.has("view")) {
-        setAnimar(true);
+        setAnimar(false);
       }
     }, 5000);
     return () => clearTimeout(timer);
