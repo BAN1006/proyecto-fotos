@@ -130,9 +130,7 @@ export default function ConfirmationSection() {
         }
       >
         <CardHeader className="flex-1/11 items-center justify-center">
-          <CardTitle className="text-black text-center lg:text-xl">
-            
-          </CardTitle>
+          <CardTitle className="text-black text-center lg:text-xl"></CardTitle>
           <CardDescription className="pl-6 pr-6 text-black lg:text-lg text-justify">
             Si tienes una foto conmigo, mándala junto con un mensajito bonito
             para guardar este recuerdo por siempre. Y si no hay foto, no pasa
@@ -152,6 +150,8 @@ export default function ConfirmationSection() {
                     </FormLabel>
                     <FormControl>
                       <Textarea
+                        maxLength={200}
+                        placeholder="200 caracteres maximo..."
                         className="border-black text-black sm:max-w-sm max-h-[220px] min-h-[220px] text-xs"
                         {...field}
                       />
