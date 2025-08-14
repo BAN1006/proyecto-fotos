@@ -49,7 +49,7 @@ export default function Cards() {
       if (!searchParams.has("view")) {
         setAnimar(true);
       }
-    }, 10000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 

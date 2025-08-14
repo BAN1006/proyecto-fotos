@@ -1,412 +1,448 @@
 const data = [
   {
-    "id": "1",
-    "nombre": "Albeyro ",
-    "apellido": "Guebara Paredes",
-    "pases": "1"
+    id: "1",
+    nombre: "Albeyro ",
+    apellido: "Guebara Paredes",
+    pases: "1",
   },
   {
-    "id": "2",
-    "nombre": "Gary ",
-    "apellido": "Vasquez Guebara ",
-    "pases": "1"
+    id: "2",
+    nombre: "Gary ",
+    apellido: "Vasquez Guebara ",
+    pases: "1",
   },
   {
-    "id": "3",
-    "nombre": "Xander",
-    "apellido": "Tarrillo Palomino",
-    "pases": "1"
+    id: "3",
+    nombre: "Xander",
+    apellido: "Tarrillo Palomino",
+    pases: "1",
   },
   {
-    "id": "4",
-    "nombre": "Lionel",
-    "apellido": "Huaman Lobato",
-    "pases": "1"
+    id: "4",
+    nombre: "Lionel",
+    apellido: "Huaman Lobato",
+    pases: "1",
   },
   {
-    "id": "5",
-    "nombre": "Anghelo",
-    "apellido": "Cruzado Huatay",
-    "pases": "1"
+    id: "5",
+    nombre: "Anghelo",
+    apellido: "Cruzado Huatay",
+    pases: "1",
   },
   {
-    "id": "6",
-    "nombre": "Bryan",
-    "apellido": "Uriarte Malca",
-    "pases": "1"
+    id: "6",
+    nombre: "Bryan",
+    apellido: "Uriarte Malca",
+    pases: "1",
   },
   {
-    "id": "7",
-    "nombre": "Angel",
-    "apellido": "Zelada Cueva",
-    "pases": "1"
+    id: "7",
+    nombre: "Angel",
+    apellido: "Zelada Cueva",
+    pases: "1",
   },
   {
-    "id": "8",
-    "nombre": "Rafael",
-    "apellido": "Guevara Meza ",
-    "pases": "1"
+    id: "8",
+    nombre: "Rafael",
+    apellido: "Guevara Meza ",
+    pases: "1",
   },
   {
-    "id": "9",
-    "nombre": "Deyvid",
-    "apellido": "Chalan Terrones",
-    "pases": "1"
+    id: "9",
+    nombre: "Deyvid",
+    apellido: "Chalan Terrones",
+    pases: "1",
   },
   {
-    "id": "10",
-    "nombre": "Marcelo",
-    "apellido": "Cajo Salcedo",
-    "pases": "1"
+    id: "10",
+    nombre: "Marcelo",
+    apellido: "Cajo Salcedo",
+    pases: "1",
   },
   {
-    "id": "11",
-    "nombre": "Rodrigo",
-    "apellido": "Cespedes Cerna",
-    "pases": "1"
+    id: "11",
+    nombre: "Rodrigo",
+    apellido: "Cespedes Cerna",
+    pases: "1",
   },
   {
-    "id": "12",
-    "nombre": "Diego",
-    "apellido": "Torrel Carrera",
-    "pases": "1"
+    id: "12",
+    nombre: "Diego",
+    apellido: "Torrel Carrera",
+    pases: "1",
   },
   {
-    "id": "13",
-    "nombre": "Joustin",
-    "apellido": "Ventura Sánchez ",
-    "pases": "1"
+    id: "13",
+    nombre: "Joustin",
+    apellido: "Ventura Sánchez ",
+    pases: "1",
   },
   {
-    "id": "14",
-    "nombre": "Jamil",
-    "apellido": "Tacilla Gallardo",
-    "pases": "1"
+    id: "14",
+    nombre: "Jamil",
+    apellido: "Tacilla Gallardo",
+    pases: "1",
   },
   {
-    "id": "15",
-    "nombre": "Paul",
-    "apellido": "Herrera Huaylla",
-    "pases": "1"
+    id: "15",
+    nombre: "Paul",
+    apellido: "Herrera Huaylla",
+    pases: "1",
   },
   {
-    "id": "16",
-    "nombre": "Victor",
-    "apellido": "Vasques Medina ",
-    "pases": "1"
+    id: "16",
+    nombre: "Victor",
+    apellido: "Vasques Medina ",
+    pases: "1",
   },
   {
-    "id": "17",
-    "nombre": "Andrews",
-    "apellido": "Vasques Rudas",
-    "pases": "1"
+    id: "17",
+    nombre: "Andrews",
+    apellido: "Vasques Rudas",
+    pases: "1",
   },
   {
-    "id": "18",
-    "nombre": "Fabio",
-    "apellido": "Cerna Tacilla",
-    "pases": "2"
+    id: "18",
+    nombre: "Fabio",
+    apellido: "Cerna Tacilla",
+    pases: "2",
   },
   {
-    "id": "19",
-    "nombre": "Fabricio",
-    "apellido": "Perez Mego",
-    "pases": "1"
+    id: "19",
+    nombre: "Fabricio",
+    apellido: "Perez Mego",
+    pases: "1",
   },
   {
-    "id": "20",
-    "nombre": "Aldair",
-    "apellido": "Rios Alvarado",
-    "pases": "1"
+    id: "20",
+    nombre: "Aldair",
+    apellido: "Rios Alvarado",
+    pases: "1",
   },
   {
-    "id": "21",
-    "nombre": "Roger",
-    "apellido": "Regalado Chico",
-    "pases": "1"
+    id: "21",
+    nombre: "Roger",
+    apellido: "Regalado Chico",
+    pases: "1",
   },
   {
-    "id": "22",
-    "nombre": "Benjhamin",
-    "apellido": "Alayo Rudas",
-    "pases": "1"
+    id: "22",
+    nombre: "Benjhamin",
+    apellido: "Alayo Rudas",
+    pases: "1",
   },
   {
-    "id": "23",
-    "nombre": "Manuel",
-    "apellido": "Vasquez Peres",
-    "pases": "1"
+    id: "23",
+    nombre: "Manuel",
+    apellido: "Vasquez Peres",
+    pases: "1",
   },
   {
-    "id": "24",
-    "nombre": "Sebastian",
-    "apellido": "Castillo Quesquen",
-    "pases": "1"
+    id: "24",
+    nombre: "Sebastian",
+    apellido: "Castillo Quesquen",
+    pases: "1",
   },
   {
-    "id": "25",
-    "nombre": "Mathias",
-    "apellido": "Ocas Cabanillas ",
-    "pases": "1"
+    id: "25",
+    nombre: "Mathias",
+    apellido: "Ocas Cabanillas ",
+    pases: "1",
   },
   {
-    "id": "26",
-    "nombre": "Piero",
-    "apellido": "Chacha Carrera",
-    "pases": "1"
+    id: "26",
+    nombre: "Piero",
+    apellido: "Chacha Carrera",
+    pases: "1",
   },
   {
-    "id": "27",
-    "nombre": "Julio",
-    "apellido": "Llanos Mendoza",
-    "pases": "1"
+    id: "27",
+    nombre: "Julio",
+    apellido: "Llanos Mendoza",
+    pases: "1",
   },
   {
-    "id": "28",
-    "nombre": "Juan Diego",
-    "apellido": "Rodriguez Ortiz",
-    "pases": "1"
+    id: "28",
+    nombre: "Juan Diego",
+    apellido: "Rodriguez Ortiz",
+    pases: "1",
   },
   {
-    "id": "29",
-    "nombre": "Lea",
-    "apellido": "Sanchez Galan",
-    "pases": "1"
+    id: "29",
+    nombre: "Lea",
+    apellido: "Sanchez Galan",
+    pases: "1",
   },
   {
-    "id": "30",
-    "nombre": "Marijoy",
-    "apellido": "Vasquez",
-    "pases": "1"
+    id: "30",
+    nombre: "Marijoy",
+    apellido: "Vasquez",
+    pases: "1",
   },
   {
-    "id": "31",
-    "nombre": "Camila",
-    "apellido": "Medina Mosqueira",
-    "pases": "1"
+    id: "31",
+    nombre: "Camila",
+    apellido: "Medina Mosqueira",
+    pases: "1",
   },
   {
-    "id": "32",
-    "nombre": "Diana",
-    "apellido": "Marlo Diaz",
-    "pases": "1"
+    id: "32",
+    nombre: "Diana",
+    apellido: "Marlo Diaz",
+    pases: "1",
   },
   {
-    "id": "33",
-    "nombre": "Xiomara",
-    "apellido": "Garcia Galan",
-    "pases": "1"
+    id: "33",
+    nombre: "Xiomara",
+    apellido: "Garcia Galan",
+    pases: "1",
   },
   {
-    "id": "34",
-    "nombre": "Mariapaz",
-    "apellido": "Lopez Ortiz",
-    "pases": "1"
+    id: "34",
+    nombre: "Mariapaz",
+    apellido: "Lopez Ortiz",
+    pases: "1",
   },
   {
-    "id": "35",
-    "nombre": "Cileyza",
-    "apellido": "Huaman Arevalo",
-    "pases": "1"
+    id: "35",
+    nombre: "Cileyza",
+    apellido: "Huaman Arevalo",
+    pases: "1",
   },
   {
-    "id": "36",
-    "nombre": "Reyshell",
-    "apellido": "Seguil Alejos",
-    "pases": "1"
+    id: "36",
+    nombre: "Reyshell",
+    apellido: "Seguil Alejos",
+    pases: "1",
   },
   {
-    "id": "37",
-    "nombre": "Isabel",
-    "apellido": "Rubio Mejia",
-    "pases": "1"
+    id: "37",
+    nombre: "Isabel",
+    apellido: "Rubio Mejia",
+    pases: "1",
   },
   {
-    "id": "38",
-    "nombre": "Sofia",
-    "apellido": "Diaz Llique",
-    "pases": "1"
+    id: "38",
+    nombre: "Sofia",
+    apellido: "Diaz Llique",
+    pases: "1",
   },
   {
-    "id": "39",
-    "nombre": "Akemy",
-    "apellido": "Paredes",
-    "pases": "1"
+    id: "39",
+    nombre: "Akemy",
+    apellido: "Paredes",
+    pases: "1",
   },
   {
-    "id": "40",
-    "nombre": "Alisson",
-    "apellido": "Salazar Cortez",
-    "pases": "1"
+    id: "40",
+    nombre: "Alisson",
+    apellido: "Salazar Cortez",
+    pases: "1",
   },
   {
-    "id": "41",
-    "nombre": "Luis",
-    "apellido": "Carrasco cabrera",
-    "pases": "1"
+    id: "41",
+    nombre: "Luis",
+    apellido: "Carrasco cabrera",
+    pases: "1",
   },
   {
-    "id": "42",
-    "nombre": "Cesar ",
-    "apellido": "nan",
-    "pases": "1"
+    id: "42",
+    nombre: "Cesar ",
+    apellido: "Mendoza Terrones ",
+    pases: "1",
   },
   {
-    "id": "43",
-    "nombre": "Anali ",
-    "apellido": "Chungas ",
-    "pases": "2"
+    id: "43",
+    nombre: "Anali ",
+    apellido: "Chungas ",
+    pases: "2",
   },
   {
-    "id": "44",
-    "nombre": "Cielo Voley",
-    "apellido": "nan",
-    "pases": "1"
+    id: "44",
+    nombre: "Cielo",
+    apellido: "nan",
+    pases: "1",
   },
   {
-    "id": "45",
-    "nombre": "Familia Vasquez Mendoza",
-    "apellido": "nan",
-    "pases": "2"
+    id: "45",
+    nombre: "Familia Vasquez Mendoza",
+    apellido: "nan",
+    pases: "2",
   },
   {
-    "id": "46",
-    "nombre": "Familia Vasquez Azañero",
-    "apellido": "nan",
-    "pases": "2"
+    id: "46",
+    nombre: "Familia Vasquez Azañero",
+    apellido: "nan",
+    pases: "2",
   },
   {
-    "id": "47",
-    "nombre": "Ray",
-    "apellido": "Vasquez Mendoza",
-    "pases": "2"
+    id: "47",
+    nombre: "Ray",
+    apellido: "Vasquez Mendoza",
+    pases: "2",
   },
   {
-    "id": "48",
-    "nombre": "Familia Mendoza Chugnas",
-    "apellido": "nan",
-    "pases": "4"
+    id: "48",
+    nombre: "Familia Mendoza Chugnas",
+    apellido: "nan",
+    pases: "4",
   },
   {
-    "id": "49",
-    "nombre": "Familia Villanueva Zelada",
-    "apellido": "nan",
-    "pases": "4"
+    id: "49",
+    nombre: "Familia Villanueva Zelada",
+    apellido: "nan",
+    pases: "4",
   },
   {
-    "id": "50",
-    "nombre": "Cielo",
-    "apellido": "Salcedo Villanueva ",
-    "pases": "2"
+    id: "50",
+    nombre: "Cielo",
+    apellido: "Salcedo Villanueva ",
+    pases: "2",
   },
   {
-    "id": "51",
-    "nombre": "Joaquin",
-    "apellido": "Salcedo Villanueva ",
-    "pases": "2"
+    id: "51",
+    nombre: "Joaquin",
+    apellido: "Salcedo Villanueva ",
+    pases: "2",
   },
   {
-    "id": "52",
-    "nombre": "Familia Alcantara Villanueva",
-    "apellido": "nan",
-    "pases": "2"
+    id: "52",
+    nombre: "Familia Alcantara Villanueva",
+    apellido: "nan",
+    pases: "2",
   },
   {
-    "id": "53",
-    "nombre": "Familia Malaver Villanueva",
-    "apellido": "nan",
-    "pases": "2"
+    id: "53",
+    nombre: "Familia Malaver Villanueva",
+    apellido: "nan",
+    pases: "2",
   },
   {
-    "id": "54",
-    "nombre": "Miguel",
-    "apellido": "Malaver Villanueva",
-    "pases": "1"
+    id: "54",
+    nombre: "Miguel",
+    apellido: "Malaver Villanueva",
+    pases: "1",
   },
   {
-    "id": "55",
-    "nombre": "Nicol",
-    "apellido": "Malaver Villanueva",
-    "pases": "2"
+    id: "55",
+    nombre: "Nicol",
+    apellido: "Malaver Villanueva",
+    pases: "2",
   },
   {
-    "id": "56",
-    "nombre": "Familia Mendoza ",
-    "apellido": "nan",
-    "pases": "2"
+    id: "56",
+    nombre: "Familia Mendoza ",
+    apellido: "nan",
+    pases: "2",
   },
   {
-    "id": "57",
-    "nombre": "Luis",
-    "apellido": "Mendoza Chugnas",
-    "pases": "4"
+    id: "57",
+    nombre: "Luis",
+    apellido: "Mendoza Chugnas",
+    pases: "4",
   },
   {
-    "id": "58",
-    "nombre": "Shirley",
-    "apellido": "Mendoza Chugnas",
-    "pases": "2"
+    id: "58",
+    nombre: "Shirley",
+    apellido: "Mendoza Chugnas",
+    pases: "2",
   },
   {
-    "id": "59",
-    "nombre": "Micaela",
-    "apellido": "Mendoza Chugnas",
-    "pases": "2"
+    id: "59",
+    nombre: "Micaela",
+    apellido: "Mendoza Chugnas",
+    pases: "2",
   },
   {
-    "id": "60",
-    "nombre": "Adriana",
-    "apellido": "Castillo Alva",
-    "pases": "3"
+    id: "60",
+    nombre: "Adriana",
+    apellido: "Castillo Alva",
+    pases: "3",
   },
   {
-    "id": "61",
-    "nombre": "Raquel",
-    "apellido": "Angulo Teran",
-    "pases": "3"
+    id: "61",
+    nombre: "Raquel",
+    apellido: "Angulo Teran",
+    pases: "3",
   },
   {
-    "id": "62",
-    "nombre": "Jheferson",
-    "apellido": "Villanueva Mendoza",
-    "pases": "3"
+    id: "62",
+    nombre: "Jheferson",
+    apellido: "Villanueva Mendoza",
+    pases: "1",
   },
   {
-    "id": "63",
-    "nombre": "Maribel",
-    "apellido": "Mendoza Teran",
-    "pases": "3"
+    id: "63",
+    nombre: "Dunkan",
+    apellido: "Rojas Atalaya",
+    pases: "1",
   },
   {
-    "id": "64",
-    "nombre": "Familia Villanueva Mendoza ",
-    "apellido": "nan",
-    "pases": "3"
+    id: "64",
+    nombre: "Majo",
+    apellido: "Castrejon Atalaya",
+    pases: "1",
   },
   {
-    "id": "65",
-    "nombre": "Sebastian Sanfer ",
-    "apellido": "nan",
-    "pases": "1"
+    id: "65",
+    nombre: "Maribel",
+    apellido: "Mendoza Teran",
+    pases: "1",
   },
   {
-    "id": "66",
-    "nombre": "Rodrigo",
-    "apellido": "Ramirez Rodrigues",
-    "pases": "1"
+    id: "66",
+    nombre: "Maria Mercedes",
+    apellido: "Tacilla Huaripata",
+    pases: "1",
   },
   {
-    "id": "67",
-    "nombre": "Adriana Jardín ",
-    "apellido": "nan",
-    "pases": "1"
+    id: "67",
+    nombre: "Giovanna",
+    apellido: "Mestanza Lozano",
+    pases: "1",
   },
   {
-    "id": "68",
-    "nombre": "Gianela",
-    "apellido": "Isla Medina ",
-    "pases": "1"
-  }
+    id: "68",
+    nombre: "Familia Villanueva Mendoza ",
+    apellido: "nan",
+    pases: "3",
+  },
+  {
+    id: "69",
+    nombre: "Felicita",
+    apellido: "Teran",
+    pases: "2",
+  },
+  {
+    id: "70",
+    nombre: "Sebastian",
+    apellido: "Ruiz Diaz",
+    pases: "1",
+  },
+  {
+    id: "71",
+    nombre: "Rodrigo",
+    apellido: "Ramirez Rodrigues",
+    pases: "1",
+  },
+  {
+    id: "72",
+    nombre: "Adriana ",
+    apellido: "nan",
+    pases: "1",
+  },
+  {
+    id: "73",
+    nombre: "Gianela",
+    apellido: "Isla Medina ",
+    pases: "1",
+  },
+  {
+    id: "74",
+    nombre: "Lucero ",
+    apellido: "Cachi Quiroz",
+    pases: "1",
+  },
 ];
 
 export default data;

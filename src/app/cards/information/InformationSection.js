@@ -79,7 +79,7 @@ export default function InformationSection() {
   } else {
     elemento = (
       <p className="text-red-700">
-        <strong>Pase para {user.pases} persona</strong>
+        <strong>Numero de pase(es): {user.pases}</strong>
       </p>
     );
     elemento_sal = (
