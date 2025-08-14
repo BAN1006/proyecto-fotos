@@ -6,18 +6,27 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import ConfirmationSection from "./confirmation/ConfirmationSection";
 import InformationSection from "./information/InformationSection";
+import { decryptParam } from "../api/utilities/utilidades";
+import data from "../../../public/data/localData";
 
-export default function Cards({ children }) {
+export default function Cards() {
   const searchParams = useSearchParams();
 
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   const search = searchParams.get("user");
 
+  var decrypt = decryptParam(search);
+
+  const user = data.find((element) => element.id === decrypt);
+
   const router = useRouter();
+
+  const [animar, setAnimar] = useState(false);
 
   const chage = () => {
     setMostrarFormulario(true);
+    setAnimar(false);
     router.push("/cards?view=01&user=" + search);
   };
 
@@ -30,12 +39,36 @@ export default function Cards({ children }) {
       section = <InformationSection />;
     } else if (tab === "02") {
       section = <ConfirmationSection />;
+    } else {
+      section = false;
     }
   }
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!searchParams.has("view")) {
+        setAnimar(true);
+      }
+    }, 10000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!section) {
+      router.push("/cards?user=" + search);
+      setMostrarFormulario(false);
+    }
+  }, [section]);
+
+  useEffect(() => {
     if (searchParams.has("view")) {
       setMostrarFormulario(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (user == null) {
+      router.push("/notaccess");
     }
   }, []);
 
@@ -46,6 +79,8 @@ export default function Cards({ children }) {
           className={`flex-1/2 transition-transform duration-700 ease-in-out z-10 lg:absolute ${
             mostrarFormulario ? "lg:translate-x-[-53%]" : "lg:translate-x-[0%]"
           }
+          ${animar ? "animate-bounce" : ""}
+          }
       `}
           onClick={chage}
         >
@@ -54,7 +89,7 @@ export default function Cards({ children }) {
               src="/card-black.png"
               width={600}
               height={600}
-              className="rounded-2xl"
+              className={`rounded-2xl`}
               alt="Picture of the author"
             />
           </div>

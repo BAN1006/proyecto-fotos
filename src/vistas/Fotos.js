@@ -25,7 +25,7 @@ export default function Fotos() {
 
   useEffect(() => {
     const getLista = async () => {
-      /* try {
+      try {
         const reg = await getDocs(collection(db, "fotos"));
         const datos = reg.docs.map((doc) => ({
           id: doc.id,
@@ -34,7 +34,7 @@ export default function Fotos() {
         setLista(datos);
       } catch (e) {
         console.log(e);
-      } */
+      }
     };
     getLista();
   }, []);
@@ -84,6 +84,7 @@ export default function Fotos() {
                               <Image
                                 src={saludo.imageUrl}
                                 fill
+                                className="object-contain"
                                 alt="Picture of the author"
                               />
                             </div>

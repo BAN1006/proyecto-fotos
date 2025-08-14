@@ -36,7 +36,6 @@ import { getDocs, collection, getFirestore } from "firebase/firestore";
 import data from "../../../../public/data/localData";
 import { decryptParam } from "@/app/api/utilities/utilidades";
 
-
 export default function ConfirmationSection() {
   const db = getFirestore(appFirebase);
 
@@ -47,8 +46,6 @@ export default function ConfirmationSection() {
   console.log("Busqueda=" + search);
 
   var decrypt = decryptParam(search);
-
-  console.log(decrypt);
 
   const user = data.find((element) => element.id === decrypt);
 
@@ -119,7 +116,7 @@ export default function ConfirmationSection() {
 
     if (dataRes.passed) {
       setLoading(false);
-      router.push("/cards?view=01&user=" + user.id);
+      router.push("/cards?view=01&user=" + search);
     }
   });
 
@@ -134,11 +131,12 @@ export default function ConfirmationSection() {
       >
         <CardHeader className="flex-1/11 items-center justify-center">
           <CardTitle className="text-black text-center lg:text-xl">
-            Sube tu recuerdo
+            
           </CardTitle>
-          <CardDescription className="pl-6 pr-6 text-black lg:text-lg">
-            Hola <strong>{user.nombre}</strong> sube un recuerdo que tengas
-            conmigo y no olvides dejarme un mensaje.
+          <CardDescription className="pl-6 pr-6 text-black lg:text-lg text-justify">
+            Si tienes una foto conmigo, mándala junto con un mensajito bonito
+            para guardar este recuerdo por siempre. Y si no hay foto, no pasa
+            nada… ¡lo que importa es el cariño!
           </CardDescription>
         </CardHeader>
         <Form {...form}>

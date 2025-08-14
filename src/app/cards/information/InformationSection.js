@@ -25,12 +25,18 @@ export default function InformationSection() {
 
   const [band, setBand] = useState(false);
 
+  var elemento = "";
+
+  var elemento_sal = "";
+
+  var elemento_des = "";
+
   useEffect(() => {
     const getLista = async () => {
       try {
         const reg = await getDocs(collection(db, "fotos"));
         reg.forEach((doc) => {
-          if (!(doc.data().user === user.nombre)) {
+          if (doc.data().user === user.nombre) {
             setBand(true);
           }
         });
@@ -41,13 +47,62 @@ export default function InformationSection() {
     getLista();
   }, []);
 
+  if (band === false) {
+    elemento = (
+      <Link
+        href={`/cards?view=02&user=${search}`}
+        className="text-black border-[1px] p-2 border-black rounded-2xl text-center align-middle hover:text-white hover:bg-black"
+      >
+        {" "}
+        Me apunto 🥳{" "}
+      </Link>
+    );
+    elemento_sal = (
+      <p className="text-black pt-1 text-justify lg:pt-8">
+        Hola <strong>{user.nombre}</strong>, cumplo 15 y quiero celebrarlo
+        rodeada de la gente que más quiero. Prepárate para una noche mágica, con
+        buena música, risas y mucho flow:
+      </p>
+    );
+    elemento_des = (
+      <>
+        <p className="text-black text-center lg:text-xl sm:text-xs pb-1 lg:pb-4">
+          <strong>
+            ¡La buena vibra arranca temprano y tú eres parte clave del show!
+          </strong>
+        </p>
+        <p className="text-black text-center lg:text-xl sm:text-xs pb-1 lg:pb-4">
+          <strong>¿Te apuntas?</strong>
+        </p>
+      </>
+    );
+  } else {
+    elemento = (
+      <p className="text-red-700">
+        <strong>Pase para {user.pases} persona</strong>
+      </p>
+    );
+    elemento_sal = (
+      <p className="text-black pt-1 text-justify lg:pt-8">
+        Listo <strong>{user.nombre}</strong>, ya confirmaste tu participacion,
+        te espero con tus mejores galas y con ganas de divertirte. No olvides:
+      </p>
+    );
+    elemento_des = (
+      <>
+        <p className="text-black text-center lg:text-xl sm:text-xs pb-1 lg:pb-4">
+          <strong>
+            ¡La buena vibra arranca temprano y tú eres parte clave del show!
+          </strong>
+        </p>
+      </>
+    );
+  }
+
   return (
     <div className="lg:min-h-[793px] flex items-center justify-center border-2 rounded-2xl border-black flex-col flex-1/2 p-6 gap-2 bg-[url('../../public/fondolg.png')] bg-center bg-no-repeat bg-cover lg:max-w-lg lg:p-11">
       <div className="flex-1/8 lg:text-xl sm:text-xs pl-3 pr-3">
-        <p className="text-black pt-1 text-justify lg:pt-8">
-          Hola <strong>{user.nombre}</strong>, con esto confirmaste tu
-          asistencia, ahora unas cosas a tomar en cuenta:
-        </p>
+        {elemento_sal}
       </div>
       <div className="flex-7/8 pl-1 pr-1 lg:[pl-3 pr-3]">
         <div className="rounded-2xl border-black border-2 pt-2">
@@ -73,7 +128,7 @@ export default function InformationSection() {
           <div>
             <p className="text-black text-center lg:text-xl sm:text-xs pb-1 pl-2 pr-2 lg:pb-3">
               <strong>
-                ¡El color negro y parecidos se reservan para quinceañera!
+                ¡El color negro y similares se reservan para la quinceañera!
               </strong>
             </p>
           </div>
@@ -110,26 +165,8 @@ export default function InformationSection() {
                 Sábado 23 agosto a las 7:00 P.M.
               </p>
             </div>
-            <div>
-              <p className="text-black text-center lg:text-xl sm:text-xs pb-1 lg:pb-4">
-                <strong>
-                  Se pide puntualidad para poder realizar la ceremonia lo mas
-                  temprano posible y asi poder disfrutar mas de la fiesta
-                </strong>
-              </p>
-            </div>
-            <div className="pb-4">
-              {!band ? (
-                <Link
-                  href={`/cards?view=02&user=${search}`}
-                  className="text-black border-[1px] p-2 border-black rounded-2xl text-center align-middle hover:text-white hover:bg-black"
-                >
-                  Enviar confirmacion
-                </Link>
-              ) : (
-                <p className="text-red-700"><strong>Numero de pases: {user.pases}</strong></p>
-              )}
-            </div>
+            <div>{elemento_des}</div>
+            <div className="pb-4">{elemento}</div>
           </div>
         </div>
       </div>
