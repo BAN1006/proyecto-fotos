@@ -2,6 +2,7 @@ import { v2 as cloudinary } from "cloudinary";
 import appFirebase from "../../../../public/data/credenciales";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { NextResponse } from "next/server";
+import fotos from "../../../../public/data/fotoData";
 
 // Configuration
 cloudinary.config({
@@ -31,23 +32,9 @@ export async function POST(request) {
     });
     urlImage = uploadResult.secure_url
   } else {
-    urlImage = "https://res.cloudinary.com/dfj7bc3te/image/upload/v1747441825/w5ktkdbl4v0wdnri6x8p.jpg"
-  }
-
-  /* bytes = await image.arrayBuffer();
-  buffer = Buffer.from(bytes);*/
-
-  if (!image) {
-    /* return NextResponse.json("No se ha subido la imagen", { status: 400 }); */
-  } else {
-    /*
-  uploadResult = await new Promise((resolve) => {
-    cloudinary.uploader
-      .upload_stream((error, uploadResult) => {
-        return resolve(uploadResult);
-      })
-      .end(buffer);
-  }); */
+    const numero = Math.floor(Math.random() * 23) + 1;
+    const link = fotos.find(item => item.id === numero)
+    urlImage = link.link
   }
 
   //enviar los datos a firebase
