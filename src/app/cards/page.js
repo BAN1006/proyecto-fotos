@@ -47,11 +47,20 @@ export default function Cards() {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!searchParams.has("view")) {
-        setAnimar(false);
+        setAnimar(true);
       }
     }, 5000);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (mostrarFormulario) {
+        setAnimar(false);
+      }
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [mostrarFormulario]);
 
   useEffect(() => {
     if (!section) {
