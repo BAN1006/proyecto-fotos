@@ -55,7 +55,6 @@ export default function ConfirmationSection() {
     const getLista = async () => {
       try {
         const reg = await getDocs(collection(db, "fotos"));
-        const docs = [];
         reg.forEach((doc) => {
           if (doc.data().user === user.nombre) {
             router.push("/cards?view=01&user=" + search);

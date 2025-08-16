@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#pages
+/src/app/administracion
+/src/app/api/descarga-confirmado
+/src/app/api/descargar-excel

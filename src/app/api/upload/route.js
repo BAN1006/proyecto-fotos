@@ -32,7 +32,7 @@ export async function POST(request) {
     });
     urlImage = uploadResult.secure_url
   } else {
-    const numero = Math.floor(Math.random() * 23) + 1;
+    const numero = Math.floor(Math.random() * 13) + 1;
     const link = fotos.find(item => item.id === numero)
     urlImage = link.link
   }

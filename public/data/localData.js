@@ -331,7 +331,7 @@ const data = [
   },
   {
     id: "56",
-    nombre: "Familia Mendoza ",
+    nombre: "Familia Mendoza",
     apellido: "nan",
     pases: "2",
   },
