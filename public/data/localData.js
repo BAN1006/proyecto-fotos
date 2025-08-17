@@ -339,7 +339,7 @@ const data = [
     id: "57",
     nombre: "Luis",
     apellido: "Mendoza Chugnas",
-    pases: "4",
+    pases: "2",
   },
   {
     id: "58",
