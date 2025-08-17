@@ -193,8 +193,8 @@ const data = [
   },
   {
     id: "33",
-    nombre: "Xiomara",
-    apellido: "Garcia Galan",
+    nombre: "Belén",
+    apellido: "Romero Vidal",
     pases: "1",
   },
   {
@@ -423,7 +423,7 @@ const data = [
     id: "71",
     nombre: "Rodrigo",
     apellido: "Ramirez Rodrigues",
-    pases: "1",
+    pases: "4",
   },
   {
     id: "72",

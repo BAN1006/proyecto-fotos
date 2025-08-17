@@ -41,6 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 #pages
-/src/app/administracion
+/src/app/administracion/confirmados
 /src/app/api/descarga-confirmado
-/src/app/api/descargar-excel
