@@ -139,8 +139,8 @@ const data = [
   },
   {
     id: "24",
-    nombre: "Sebastian",
-    apellido: "Castillo Quesquen",
+    nombre: "Daniela",
+    apellido: "Malimba",
     pases: "1",
   },
   {
