@@ -109,8 +109,8 @@ const data = [
   },
   {
     id: "19",
-    nombre: "Fabricio",
-    apellido: "Perez Mego",
+    nombre: "Ianmijkael",
+    apellido: "Tumbay Balcazar",
     pases: "1",
   },
   {
@@ -441,6 +441,12 @@ const data = [
     id: "74",
     nombre: "Lucero ",
     apellido: "Cachi Quiroz",
+    pases: "1",
+  },
+  {
+    id: "75",
+    nombre: "Brigitte",
+    apellido: "nan",
     pases: "1",
   },
 ];
