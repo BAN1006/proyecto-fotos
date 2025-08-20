@@ -449,6 +449,12 @@ const data = [
     apellido: "nan",
     pases: "1",
   },
+  {
+    id: "76",
+    nombre: "Renato",
+    apellido: "Malca Quiroz",
+    pases: "1",
+  },
 ];
 
 export default data;
