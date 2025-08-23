@@ -43,3 +43,5 @@ next-env.d.ts
 #pages
 /src/app/administracion/confirmados
 /src/app/api/descarga-confirmado
+/src/app/api/upload
+/src/app/cards

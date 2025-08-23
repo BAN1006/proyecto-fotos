@@ -8,20 +8,17 @@ export async function GET(request) {
   try {
     // Creamos los links
     const linksData = data.map((x) => {
-
-      var linkFinal = ""
+      var linkFinal = "";
       // URL completa (incluye protocolo y dominio)
       const fullUrl = request.url;
       // Dominio solamente (ej: "midominio.com")
-      const dominio = new URL(fullUrl).host;      
-
-      let linkBase = "192.168.1.19:3000/cards?user="; // Cambiar si es necesario
+      const dominio = new URL(fullUrl).host;
       let encrypt = encryptParam(x.id);
 
-      if(dominio!="localhost:3000"){
-        linkFinal = "http://"+dominio+"/cards?user="+encrypt;
-      }else{
-        linkFinal = "http://"+"192.168.1.21"+"/cards?user="+encrypt;
+      if (dominio != "localhost:3000") {
+        linkFinal = "http://" + dominio + "/cards?user=" + encrypt;
+      } else {
+        linkFinal = "http://" + "192.168.1.21" + "/cards?user=" + encrypt;
       }
 
       return {

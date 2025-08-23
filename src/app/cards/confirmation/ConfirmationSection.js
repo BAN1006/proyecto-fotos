@@ -43,8 +43,6 @@ export default function ConfirmationSection() {
 
   const search = searchParams.get("user");
 
-  console.log("Busqueda=" + search);
-
   var decrypt = decryptParam(search);
 
   const user = data.find((element) => element.id === decrypt);
@@ -80,7 +78,6 @@ export default function ConfirmationSection() {
   const [dots, setDots] = useState("");
 
   const userSchema = z.object({
-    mensaje: z.string().min(1).max(200),
     image: z.instanceof(File).refine((file) => {
       if (file.size < 5000000 && file.size >= 0) {
         return true;
@@ -92,7 +89,6 @@ export default function ConfirmationSection() {
   const form = useForm({
     resolver: zodResolver(userSchema),
     defaultValues: {
-      mensaje: "",
       image: new File([], ""),
     },
   });
