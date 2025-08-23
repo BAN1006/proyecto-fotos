@@ -6,7 +6,7 @@ export async function GET(request) {
   const fullUrl = request.url;
   // Dominio solamente (ej: "midominio.com")
   const dominio = new URL(fullUrl).host;
-  const url = "http://" + dominio + "memories/posting"; // 👉 la URL a codificar
+  const url = "http://" + dominio + "/memories/posting"; // 👉 la URL a codificar
 
   // Generar QR como buffer PNG
   const qrBuffer = await QRCode.toBuffer(url, { type: "png", width: 300 });
